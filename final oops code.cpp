@@ -5,13 +5,13 @@
 using namespace std;
 struct patient
 {
-    long long mob_no;
+        long long mob_no;
 	string firstname;
 	string lastname;
 	int age;
 	char blood_grp[6];
 	char gender;
-    patient*next;
+        patient*next;
 };
 class hospital_management
 {
@@ -93,9 +93,7 @@ patient hospital_management :: input()
    cin>>p->age;
    cout<<"\tMobile number    : ";
    cin>>p->mob_no;
-
-
-	if(search(p->mob_no))
+         if(search(p->mob_no))
 	{
 		p->mob_no=0;
 		cout << "\n\tData not valid. Operation cancelled.";
@@ -163,7 +161,7 @@ void hospital_management:: insertatend()
 }
 void hospital_management :: getpatientout()
 {
-	 system("cls");
+     system("cls");
      if(front==NULL)
      {
      	cout<<"\n\tNo Patient to operate";
@@ -175,7 +173,7 @@ void hospital_management :: getpatientout()
      	front=front->next;
  	    cout << "\n\tPatient to operate:";
         output(p);
- 	 }
+     }
 }
 
 void hospital_management:: displaypatients()
@@ -183,7 +181,7 @@ void hospital_management:: displaypatients()
      if(front==NULL)
      {
      	cout<<"\n\tNo patient";
- 	 }
+     }
      patient*p=new patient;
      p=front;
      while(p!=NULL)
@@ -214,25 +212,25 @@ void deptmenu (hospital_management * q)
     switch (choice)
 	{
 	  case 1:	q->insertatend();
-				cout << "\n\tPress any key";
+			cout << "\n\tPress any key";
 	    		getch();
-	 			break;
+			break;
 
-      case 2:	q->insertatbeg();
+          case 2:	q->insertatbeg();
 	    		cout << "\n\tPress any key";
 	    		getch();
-				break;
+			break;
 
-      case 3:	q->getpatientout();
-	 			cout<<"\n\tPress any key";
+          case 3:	q->getpatientout();
+			cout<<"\n\tPress any key";
      			getch();
 	      		break;
 
-      case 4:	system("cls");
-	 			q->displaypatients();
-	 			cout<<"\n\tPress any key";
-	 			getch();
-				break;
+          case 4:	system("cls");
+			q->displaypatients();
+			cout<<"\n\tPress any key";
+			getch();
+			break;
 	 }
     }
 }
@@ -241,7 +239,7 @@ void hospital_management::total_bill()
 	cout<<"        docter fees: ";
 	cin>>fee;
 	cout<<"        medicine bill: ";
-    cin>>med_fee;
+        cin>>med_fee;
 }
 void total_exp(hospital_management obj)
 {
@@ -254,7 +252,7 @@ void total_exp(hospital_management obj)
 int main ()
 {
     int i, choice = 0;
-	hospital_management depts[4];
+    hospital_management depts[4];
     hospital_management p1;
     
 	while(choice!=5)
