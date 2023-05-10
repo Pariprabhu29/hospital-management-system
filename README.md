@@ -1,4 +1,4 @@
-# OOPS LA MINI PROJECT
+# C++ OOPS MINI PROJECT
 done by:PARINITHA P
         SHREYA 
         SWATHI K T
